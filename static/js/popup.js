@@ -62,12 +62,13 @@ const PopupPage = {
             high = res['h'][1],
             low = res['l'][1],
             perf = ((price - opening) / opening) * 100;
+          const perfPrefix = (perf > 0) ? "+" : '';
 
           $('.js--ticker-price').html(App.priceFormatter(price, 2, 10));
           $('.js--ticker-opening').html(App.priceFormatter(opening, 2, 10));
           $('.js--ticker-high').html(App.priceFormatter(high, 2, 10));
           $('.js--ticker-low').html(App.priceFormatter(low, 2, 10));
-          percentHtml.html(parseFloat(perf).toFixed(2) + "%");
+          percentHtml.html(perfPrefix + parseFloat(perf).toFixed(2) + "%");
 
           if (perf > 0) {
             percentHtml.addClass('ticker__percentage--green').removeClass('ticker__percentage--red');
