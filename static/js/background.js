@@ -26,11 +26,12 @@ const Background = {
           res = JSON.parse(response.responseText)['result']['XDG' + Config.user.currency];
           price = res['c'][0];
 
-          if (price > res['o']) {
-            this.changeBadge(App.priceFormatter(price, 2, 10), Options.badgeColorGreen);
-          } else {
-            this.changeBadge(App.priceFormatter(price, 2, 10), Options.badgeColorRed);
+          let color = Options.badgeColorGreen
+          if (price < res['o']) {
+            color = Options.badgeColorRed
           }
+
+          this.changeBadge(App.priceFormatter(price, 2, 4, false), color);
         }
       }
     });

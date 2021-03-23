@@ -14,17 +14,21 @@ const App = {
    * @param price
    * @param minimumFractionDigits
    * @param maximumFractionDigits
+   * @param currency
    * @returns String
    */
-  priceFormatter: function (price, minimumFractionDigits = 2, maximumFractionDigits = 2) {
-    const formatter = new Intl.NumberFormat(Currency[Config.user.currency].locale, {
-      style: 'currency',
+  priceFormatter: function (price, minimumFractionDigits = 2, maximumFractionDigits = 2, currency = true) {
+    let options = {
       currency: Config.user.currency,
 
       minimumFractionDigits: minimumFractionDigits,
       maximumFractionDigits: maximumFractionDigits
-    });
+    };
+    if(currency) {
+      options.style = 'currency';
+    }
 
+    const formatter = new Intl.NumberFormat(Currency[Config.user.currency].locale, options);
     return formatter.format(price);
   },
 
