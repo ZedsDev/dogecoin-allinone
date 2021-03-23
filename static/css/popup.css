@@ -1,0 +1,162 @@
+body {
+    width: 500px;
+    font-family: 'Roboto', sans-serif;
+    color: #3E4552;
+    background: #F4F7FA;
+}
+
+body, ul {
+    padding: 0;
+    margin: 0;
+}
+
+.topbar {
+    background: #ba9f33;
+}
+
+.topbar__logo {
+    height: 20px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.topbar__menu {
+    list-style: none;
+    padding-left: 36px;
+}
+
+.topbar__menu li {
+    list-style-type: none;
+}
+
+.topbar__menu li a {
+    display: block;
+    float: left;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-size: 13px;
+}
+
+.topbar__menu li a .fa-mr {
+    margin-right: 5px;
+}
+
+.topbar__menu li a:hover,
+.topbar__menu li a.tab--selected {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/** General **/
+.title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 12px;
+}
+
+/** Tabs **/
+.tab {
+    padding: 10px 0;
+}
+
+.tab--hidden {
+    display: none;
+}
+
+/** Ticker **/
+.ticker {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.ticker__price {
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    line-height: 27px;
+}
+
+.ticker__value {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.ticker__percentage {
+    text-align: right;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.ticker__percentage--green {
+    color: #2E7D32;
+}
+
+.ticker__percentage--red {
+    color: #C62828;
+}
+
+.ticker__data {
+    font-size: 11px;
+    text-align: center;
+}
+
+/** Wallets **/
+.wallets {
+    font-size: 19px;
+}
+
+.wallets__entry {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.wallets__entry-name {
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    background: #d2c389;
+    font-size: 16px;
+}
+
+.wallets__entry-value {
+    padding: 15px 0;
+    background: #F9FBFC;
+}
+
+.wallets__entry-doge {
+    font-size: 16px;
+}
+
+.wallets__entry-currency {
+    color: #9BA6B2;
+    font-size: 15px;
+}
+
+.no-wallet-info {
+    color: #9BA6B2;
+    text-align: center;
+    font-style: italic;
+    font-size: 12px;
+}
+
+/** No bullshit **/
+.no-bullshit {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+/** You can help **/
+.you-can-help {
+
+}

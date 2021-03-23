@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Ethereum All-in-One | ETH Ticker Price | Wallets Viewer</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto" rel="stylesheet">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/options.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="topbar">
+    <img src="../static/images/icon48.png" class="topbar__logo"/>
+    <ul class="topbar__menu">
+        <li><a href="#" class="js--tab-switcher tab--selected" data-goto="general"><i class="fa fa-home fa-mr"></i> General</a></li>
+        <li><a href="#" class="js--tab-switcher" data-goto="wallets"><i class="fa fa-money fa-mr"></i> My wallets</a></li>
+    </ul>
+    <div style="clear:both;"></div>
+</div>
+
+<div class="container">
+    <div class="tab" data-tab="general">
+        <div class="card">
+            <div class="card-body">
+                <div class="title">General configuration</div>
+
+                <form class="js--general-form">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="currency">Currency</label>
+                                <select class="form-control" id="currency">
+                                    <option value="USD">USD (US Dollar)</option>
+                                    <option value="EUR">EUR (Euro)</option>
+                                </select>
+                                <small class="form-text text-muted">Will be used for exchange rates</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="tab tab--hidden" data-tab="wallets">
+        <div class="card">
+            <div class="card-body">
+                <div class="title">My wallets</div>
+
+                <p>You can configure multiple wallets.</p>
+
+                <form class="js--wallets-form">
+
+                    <!-- Wallet form template -->
+                    <div class="d-none js--wallet-tpl">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="wallet-{{id}}-name">Wallet n°{{id}}</label>
+                                    <input class="form-control" id="wallet-{{id}}-name" placeholder="Enter a name for the wallet">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="wallet-{{id}}-address">&nbsp;</label>
+                                    <input class="form-control" id="wallet-{{id}}-address" placeholder="Enter a wallet address">
+                                    <small class="form-text text-muted">Please note that a cloud wallet can return wrong balance.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Wallet form template -->
+
+                    <div class="js--wallets-form-container"></div>
+                    <button class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../static/js/jquery-3.2.1.min.js"></script>
+<script src="../static/js/config.js"></script>
+<script src="../static/js/app.js"></script>
+<script src="../static/js/tab-switcher.js"></script>
+<script src="../static/js/options.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #3E4552;
+    background: #F4F7FA;
+}
+body, ul {
+    padding: 0;
+    margin: 0;
+}
+
+/** General **/
+.title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 23px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+p {
+    font-size: 14px;
+}
+.container {
+    padding-top: 20px;
+}
+
+/** Topbar **/
+.topbar {
+    background: #ba9f33;
+}
+.topbar__logo {
+    height: 20px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+.topbar__menu {
+    list-style: none;
+    padding-left: 36px;
+}
+.topbar__menu li {
+    list-style-type: none;
+}
+.topbar__menu li a {
+    display: block;
+    float: left;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-size: 13px;
+}
+.topbar__menu li a .fa-mr {
+    margin-right: 5px;
+}
+.topbar__menu li a:hover,
+.topbar__menu li a.tab--selected {
+    background: rgba(255,255,255,0.1);
+}
+
+/** Options **/
+.tab--hidden {
+    display: none;
+}

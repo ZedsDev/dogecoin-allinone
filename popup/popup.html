@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Dogecoin All-in-One | DOGE Ticker Price | Wallets Viewer</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto" rel="stylesheet">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/popup.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="topbar">
+    <img src="../static/images/icon48.png" class="topbar__logo"/>
+    <ul class="topbar__menu">
+        <li><a href="#" class="js--tab-switcher tab--selected" data-goto="home"><i class="fa fa-home fa-mr"></i> Home</a></li>
+<!--        <li><a href="#" class=""><i class="fa fa-line-chart fa-mr"></i> Charts <span class="badge badge-danger">Soon</span></a></li>-->
+        <li><a href="#" class="js--tab-switcher" data-goto="help"><i class="fa fa-question fa-mr"></i> Help</a></li>
+        <li><a href="#" class="js--open-settings" data-goto="settings"><i class="fa fa-cog"></i></a></li>
+    </ul>
+    <div style="clear:both;"></div>
+</div>
+
+<div class="container-fluid">
+    <div class="tab" data-tab="home">
+        <div class="ticker">
+            <div class="ticker__value">
+                <div class="ticker__price">1 DOGE = <span class="js--ticker-price">---</span></div>
+                <div class="ticker__percentage js--percentage">--.--%</div>
+            </div>
+
+            <div class="row ticker__data">
+                <div class="col-4">Opening: <span class="js--ticker-opening">---</span></div>
+                <div class="col-4">High: <span class="js--ticker-high">---</span></div>
+                <div class="col-4">Low: <span class="js--ticker-low">---</span></div>
+            </div>
+        </div>
+
+        <div class="wallets">
+            <div class="title">My wallets</div>
+
+            <!-- Wallet Template -->
+            <div class="d-none js--wallet-tpl">
+                <div class="col-{{col}}">
+                    <div class="wallets__entry">
+                        <div class="wallets__entry-name js--wallet-{{id}}-name">---</div>
+                        <div class="wallets__entry-value">
+                            <div class="wallets__entry-doge"><span class="js--wallet-{{id}}-value">---</span> Dogecoin</div>
+                            <div class="wallets__entry-currency">≈ <span class="js--wallet-{{id}}-currency"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Wallet Template -->
+
+            <div class="row js--wallets-container"></div>
+            <div class="no-wallet-info d-none col-12">You have 0 wallet configured.<br />You can configure one <a href="#" class="js--open-settings">in the settings</a>.</div>
+        </div>
+    </div>
+    <div class="tab tab--hidden" data-tab="help">
+        <div class="no-bullshit">
+            <div class="title">No bullshit</div>
+            <div class="row">
+                <div class="col-6">
+                    <p class="no-bullshit__content">
+                        No malware, no weird permissions, everything local!<br />
+                        Check the <a href="#" class="js--open-manifest">manifest.json</a> file to verify.
+                    </p>
+                </div>
+                <div class="col-6">
+                    <p>
+                        This project is open-source, you can take a look at the <a href="https://github.com/ZedsDev/dogecoin-allinone" target="_blank">Github</a> repository.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="you-can-help">
+            <div class="title">You can help</div>
+                    <p>
+                        If you want/need new features, you can <a href="https://github.com/ZedsDev/dogecoin-allinone/issues" target="_blank">create a request here</a> and I'll check it out!<br />
+                        And if you like this extension, you can buy me a coffee :)
+                    </p>
+                    <p>
+                        <b>DOGE</b>: DQcTRWbkhLzJUAucSzmYMALkfLa4hHzm36<br />
+                        <b>BTC</b>: 13xLw6YBBN5C9vAt2RDXnBe58o9Mm2cSj7
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../static/js/jquery-3.2.1.min.js"></script>
+<script src="../static/js/config.js"></script>
+<script src="../static/js/app.js"></script>
+<script src="../static/js/tab-switcher.js"></script>
+<script src="../static/js/popup.js"></script>
+</body>
+</html>
