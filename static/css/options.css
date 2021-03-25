@@ -60,3 +60,10 @@ p {
 .tab--hidden {
     display: none;
 }
+
+/** Form **/
+.form-success {
+    font-size: 0.8em;
+    font-weight: bold;
+    padding-left: 12px;
+}
