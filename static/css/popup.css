@@ -150,13 +150,8 @@ p {
     font-size: 12px;
 }
 
-/** No bullshit **/
-.no-bullshit {
+/** Help **/
+.no-bullshit, .api-usages {
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
-}
-
-/** You can help **/
-.you-can-help {
-
 }
